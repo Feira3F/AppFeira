@@ -40,7 +40,7 @@
 
         .search-container input {
             width: 80%; 
-            padding: 8px 30px 8px 40px; /* Aumentei o espaço à esquerda para o ícone */
+            padding: 8px 30px 8px 40px; 
             border-radius: 20px;
             border: none;
             outline: none;
@@ -52,8 +52,8 @@
             left: 10px;
             top: 50%;
             transform: translateY(-50%);
-            color: #aaa; /* Cor do ícone */
-            font-size: 18px; /* Tamanho do ícone */
+            color: #aaa; 
+            font-size: 18px; 
         }
 
         .ods-container {
@@ -79,7 +79,7 @@
         }
 
         .ods-icon {
-            width: 100%; /* Ajuste para preencher o card */
+            width: 100%; 
             height: auto;
         }
     </style>
@@ -97,23 +97,23 @@
 
     <script>
         const ods = [
-            { image: "https://www.estrategiaods.org.br/wp-content/uploads/2021/10/ODS1.jpg" },
-            { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmZdw3SPPs7kWm43mp3gslmydD-F-jFRMHhA&s" },
-            { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjWvRI4nfdlhO-Vp_VqmBpPyDsN0JBo_FY5Q&s" },
-            { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShz5l9s5erZCkm5W3EVGQT83lxhBviMIo6lA&s" },
-            { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHnArMpAiR9szJXYdrpYnlFtqEWanbaUKrg&s" },
-            { image: "https://www.estrategiaods.org.br/wp-content/uploads/2021/10/ODS6-1.jpg" },
-            { image: "https://www.estrategiaods.org.br/wp-content/uploads/2021/10/ODS7-1.jpg" },
-            { image: "https://observavix.vitoria.es.gov.br/objetivo/8/imagem" },
-            { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVW9LO1TCvEEpEXIm9G6phOWPI2OAc3nKjpA&s" },
-            { image: "https://sc.movimentoods.org.br/wp-content/uploads/2019/09/10-Redu%C3%A7%C3%A3o-das-Desigualdades.-Vetorizada.-JPG.-Com-t%C3%ADtulo.-Colorida.jpg" },
-            { image: "https://www.estrategiaods.org.br/wp-content/uploads/2021/10/ODS11-1.jpg" },
-            { image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Ods12_BR.png" },
-            { image: "https://gtagenda2030.org.br/wp-content/uploads/2019/10/ods13.jpg?w=640" },
-            { image: "https://www.estrategiaods.org.br/wp-content/uploads/2021/10/ODS14-1-1.jpg" },
-            { image: "https://www.estrategiaods.org.br/wp-content/uploads/2021/10/ODS15-1.jpg" },
-            { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEnAvYv5q8kQhqTng7CQN8RLK1JKJ0Iut92Xj5J-uB6ogWPaqCbvSwmY3STKNfCcsRWkc&usqp=CAU" },
-            { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ7Z1A5Zg9UasSgqFPxv9Kgkt4TSRezJRqvY1zE6H8tCQk3FALDv-_aPop8VkvMbv-fhY&usqp=CAU" },
+            { image: "https://www.estrategiaods.org.br/wp-content/uploads/2021/10/ODS1.jpg", link: "https://brasil.un.org/pt-br/sdgs/1" },
+            { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmZdw3SPPs7kWm43mp3gslmydD-F-jFRMHhA&s", link: "https://brasil.un.org/pt-br/sdgs/2" },
+            { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjWvRI4nfdlhO-Vp_VqmBpPyDsN0JBo_FY5Q&s", link: "https://brasil.un.org/pt-br/sdgs/3" },
+            { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShz5l9s5erZCkm5W3EVGQT83lxhBviMIo6lA&s", link: "https://brasil.un.org/pt-br/sdgs/4" },
+            { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHnArMpAiR9szJXYdrpYnlFtqEWanbaUKrg&s", link: "https://brasil.un.org/pt-br/sdgs/5" },
+            { image: "https://www.estrategiaods.org.br/wp-content/uploads/2021/10/ODS6-1.jpg", link: "https://brasil.un.org/pt-br/sdgs/6" },
+            { image: "https://www.estrategiaods.org.br/wp-content/uploads/2021/10/ODS7-1.jpg", link: "https://brasil.un.org/pt-br/sdgs/7" },
+            { image: "https://observavix.vitoria.es.gov.br/objetivo/8/imagem", link: "https://brasil.un.org/pt-br/sdgs/8" },
+            { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVW9LO1TCvEEpEXIm9G6phOWPI2OAc3nKjpA&s", link: "https://brasil.un.org/pt-br/sdgs/9" },
+            { image: "https://sc.movimentoods.org.br/wp-content/uploads/2019/09/10-Redu%C3%A7%C3%A3o-das-Desigualdades.-Vetorizada.-JPG.-Com-t%C3%ADtulo.-Colorida.jpg", link: "https://brasil.un.org/pt-br/sdgs/10" },
+            { image: "https://www.estrategiaods.org.br/wp-content/uploads/2021/10/ODS11-1.jpg", link: "https://brasil.un.org/pt-br/sdgs/11" },
+            { image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Ods12_BR.png", link: "https://brasil.un.org/pt-br/sdgs/12" },
+            { image: "https://gtagenda2030.org.br/wp-content/uploads/2019/10/ods13.jpg?w=640", link: "https://brasil.un.org/pt-br/sdgs/13" },
+            { image: "https://www.estrategiaods.org.br/wp-content/uploads/2021/10/ODS14-1-1.jpg", link: "https://brasil.un.org/pt-br/sdgs/14" },
+            { image: "https://www.estrategiaods.org.br/wp-content/uploads/2021/10/ODS15-1.jpg", link: "https://brasil.un.org/pt-br/sdgs/15" },
+            { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEnAvYv5q8kQhqTng7CQN8RLK1JKJ0Iut92Xj5J-uB6ogWPaqCbvSwmY3STKNfCcsRWkc&usqp=CAU", link: "https://brasil.un.org/pt-br/sdgs/16" },
+            { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ7Z1A5Zg9UasSgqFPxv9Kgkt4TSRezJRqvY1zE6H8tCQk3FALDv-_aPop8VkvMbv-fhY&usqp=CAU", link: "https://brasil.un.org/pt-br/sdgs/17" },
         ];
 
         function displayODS() {
@@ -124,7 +124,9 @@
                 const card = document.createElement('div');
                 card.className = 'ods-card';
                 card.innerHTML = `
-                    <img src="${od.image}" class="ods-icon">
+                    <a href="${od.link}" target="_blank">
+                        <img src="${od.image}" class="ods-icon">
+                    </a>
                 `;
                 container.appendChild(card);
             });
@@ -134,3 +136,4 @@
     </script>
 </body>
 </html>
+
