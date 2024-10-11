@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo revezamento</title>
+    <link rel="stylesheet" href="stylesrev.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="row">
+                <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                </svg></a>
+                <h2>Novo revezamento</h2>
+            </div>
+            <p>Adicione um novo horário.</p>
+        </header>
+        <main>
+            <form>
+                <div class="input-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" placeholder="Nome Sobrenome">
+                </div>
+
+                <div class="horario">
+                    <div class="input-group">
+                        <label for="inicio">Início</label>
+                        <input type="time" id="inicio" placeholder="XX : XX">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="fim">Fim</label>
+                        <input type="time" id="fim" placeholder="XX : XX">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Cor</label>
+                    <div class="color-options">
+                        <div class="input-group">
+                            <div class="color-options">
+                                <input type="radio" name="color" id="red" value="red" hidden>
+                                <label for="red" class="color-circle red"></label>
+                                
+                                <input type="radio" name="color" id="blue-light" value="blue-light" hidden>
+                                <label for="blue-light" class="color-circle blue-light"></label>
+                        
+                                <input type="radio" name="color" id="yellow" value="yellow" hidden>
+                                <label for="yellow" class="color-circle yellow"></label>
+                                
+                                <input type="radio" name="color" id="green-dark" value="green-dark" hidden>
+                                <label for="green-dark" class="color-circle green-dark"></label>
+                        
+                                <input type="radio" name="color" id="purple" value="purple" hidden>
+                                <label for="purple" class="color-circle purple"></label>
+                                
+                                <input type="radio" name="color" id="peach" value="peach" hidden>
+                                <label for="peach" class="color-circle peach"></label>
+                                
+                                <input type="radio" name="color" id="green-light" value="green-light" hidden>
+                                <label for="green-light" class="color-circle green-light"></label>
+                        
+                                <input type="radio" name="color" id="cyan" value="cyan" hidden>
+                                <label for="cyan" class="color-circle cyan"></label>
+                        
+                                <input type="radio" name="color" id="neon-green" value="neon-green" hidden>
+                                <label for="neon-green" class="color-circle neon-green"></label>
+                        
+                                <input type="radio" name="color" id="pink-light" value="pink-light" hidden>
+                                <label for="pink-light" class="color-circle pink-light"></label>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+
+                <button type="submit" class="save-button">Salvar</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
