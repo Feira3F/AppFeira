@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feira Tecnológica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button id="home-link" class="nav-link" onclick="showHome()">
+                <span>< <span id="home-title">Home</span></span>
+            </button>
+            <button id="back-link" class="nav-link" onclick="voltarParaHome()" style="display:none;">
+                <span id="back-button">< <span id="page-title">Créditos</span></span>
+            </button>
+            <div class="wave" id="wave"></div>
+            <img src="CPS.png" alt="Logo" class="logo" id="logo-img">
+            <img src="fundo.png" alt="Fundo" class="background-image">
+        </header>
+
+        <main>
+            <section id="home-section">
+                <button class="team-button" onclick="showTeam()">
+                    <div class="square-left"></div> 
+                    <img src="Equipe_3.png" alt="Ícone da Equipe">
+                    <div class="text-container">
+                        <span style="font-size: 25px; margin-left: 20px;">Equipe 3°F</span>
+                        <p style="margin-right: 6px; margin-top: 10px; font-size: 14px;">Clique para ver</p>
+                    </div>
+                </button>
+
+                <button class="person-button">
+                    <div class="square-left"></div> 
+                    <img src="Edilma.png" alt="Foto da Pessoa">
+                     <span style="font-size: 22px; margin-left: 5px;">Edilma (Di Binda)</span>
+                </button>
+            </section>
+
+            <section id="team-section" style="display:none;">
+                <h2 style="font-size: 30px; color: #929292; font-weight: bold;">EQUIPE 3°F</h2>
+                <ul class="team-list">
+
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <a href="#"><i class="fas fa-camera"></i></a>
+            <a href="#"><i class="fas fa-home"></i></a>
+            <a href="#"><i class="fas fa-book-open"></i></a>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
