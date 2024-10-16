@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Avaliação</title>
+</head>
+<style>
+     body {
+            background: linear-gradient(to right, #050205, #2C172F);
+            color: white;
+            margin: 0; 
+            padding: 0; 
+            display: flex;
+            flex-direction: column; 
+        }
+        header {
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            z-index: 1000; 
+        }
+        .back-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-top: 4%;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 4%;
+        }
+        .container {
+            margin-right: 0;
+            border-radius: 50px;
+            background-color: white;
+            color: black; 
+            width: auto;
+            height: 600px; 
+            padding: 5%;
+            margin-top: 100px; 
+            overflow: auto;
+            display: flex;
+            flex-direction: column; 
+        }
+        .img {
+            width: 220px;
+            height: 200px;
+            background-color: #ccc; 
+            border-radius: 50px;
+            align-items: center; 
+            justify-content: center; 
+             margin: 0 auto; 
+             display: flex;
+          }
+        .theme-title {
+            font-size: 26px;
+            font-weight: bold;
+            margin: 0px 0;
+            text-align: center;
+            margin-top: 2%;
+        }
+        .details {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+         .details-1{
+            font-size: 18px;
+            margin: 10px 0;
+            text-align: center;
+        }
+         .button {
+            margin-left: 25%;
+            width: 50%;
+            background-color: #4E2A55; 
+            color: white; 
+            border: none; 
+            border-radius: 8px; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            transition: background-color 0.3s; 
+            align-items: center;
+            margin-bottom: 3%;
+        }
+        .icon {
+            margin-right: 8px;
+        }
+        .ods{
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .barra {
+            position: relative; 
+            width: 100%; 
+            height: 1px; 
+            background-color: transparent; 
+            margin: 20px 0;
+        }
+        .linha {
+            height: 1px; 
+            background-color: #ccc; 
+            width: 100%; 
+            position: absolute; 
+            top: 50%; 
+            left: 0; 
+        }
+        .footer {
+            background-color: #000; 
+            color: white; 
+            display: flex;
+            justify-content: space-around; 
+            align-items: center; 
+            padding: 20px; 
+            position: relative; 
+            margin-bottom: -5.5%;
+            margin-left: -6%;
+            width: 110%; 
+        }
+        .icon {
+            font-size: 20px; 
+            cursor: pointer; 
+            transition: color 0.3s; 
+        }
+        .icon:hover {
+            color: #ccc; 
+        }
+</style>
+<body>
+    <header>
+        <button class="back-button">&lt;</button>
+        <span class="title">Stand</span>
+    </header>
+    <div class="container">
+        <div class="img"></div>
+        <div class="theme-title">Tema</div>
+        <div class="details-1">Turma</div>
+        <div class="ods">ODS #</div>
+        <div class="barra">
+            <div class="linha"></div>
+        </div>
+        <div class="details">Integrantes:</div>
+        <div class="resposta">texto...</div>
+        <div class="barra">
+            <div class="linha"></div>
+        </div>
+        <div class="details">Descrição do projeto:</div>
+        <div class="resposta-1">texto...</div>
+        <div class="barra">
+            <div class="linha"></div>
+        </div>
+        <button class="button">
+            <span class="icon">🎓</span> Avaliar
+        </button>
+        <footer class="footer">
+        <div class="icon" title="Galeria"><i class="fas fa-camera"></i></div>
+        <div class="icon" title="Início"><i class="fas fa-home"></i></div>
+        <div class="icon" title="Livros"><i class="fas fa-book"></i></div>
+    </footer>
+    </div>
+</body>
+</html>

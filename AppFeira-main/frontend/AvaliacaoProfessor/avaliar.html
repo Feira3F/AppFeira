@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #323643;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 40px 40px 0 0;
+            margin-top: 25%;
+            padding: 20px;
+            width: 100%;
+            flex: 1;
+            box-sizing: border-box; /* Inclui padding e bordas na largura total */
+        }
+
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin: 5px 0;
+            font-size: 25px;
+        }
+
+        h3{
+            text-align: center;
+            color: #333;
+            font-size: 16px; /* Tamanho menor */
+            font-weight: 300; /* Fonte mais fina */
+            margin: 5px 0;
+        }
+
+        label {
+            display: inline-block;
+            margin: 10px 0 5px;
+            color: #333;
+            width: 70%; /* Ajuste para a largura da label */
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-left: 13%;
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 35%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            margin-right: 10%; /* Espaço entre label e input */
+        }
+        .rating input {
+            width: 50px; /* Largura do campo de nota */
+            text-align: center;
+        }
+        button {
+            width: 40%;
+            padding: 15px;
+            background-color: #4E2A55;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block; /* Para centralizar */
+            margin: 20px auto 0; /* Centraliza o botão */
+        }
+        button:hover {
+            background-color: #323643;
+        }
+
+        .espaca{
+            margin-top: 30px;
+        }
+
+        .divider {
+            border-bottom: 1px solid #DBDBDB;
+            width: 85%;
+            display: block;
+            margin: 5px auto ;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            margin-left: 13%;
+        }
+        .section-title {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        .section-content {
+            font-size: 1em;
+            color: #777;
+        }
+
+        .observation-section {
+            margin-top: 30px;
+        }
+
+        .observation-input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+         /* Styles for the footer */
+         .footer {
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+        }
+        .footer-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer-icon img {
+            width: 35px;
+            height: 35px;
+        }
+        .footer-icon span {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Tema</h1>
+    <h3>Turma</h3>
+    <h3>Ods</h3>
+    <div class="espaca"></div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+        <div class="section-title">Integrantes</div>
+        <div class="section-content">texto...</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+        <div class="section-title">Descrição</div>
+        <div class="section-content">texto...</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="espaca"></div>
+    <h2>Avalie o stand 1</h2>
+    <div class="espaca"></div>
+
+    <div class="divider"></div>
+
+    <div class="input-group">
+        <label for="oralidade">Oralidade</label>
+        <input type="number" id="oralidade" min="0" max="10" placeholder="Nota">
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="input-group">
+        <label for="postura">Postura</label>
+        <input type="number" id="postura" min="0" max="10" placeholder="Nota">
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="input-group">
+        <label for="organizacao">Organização</label>
+        <input type="number" id="organizacao" min="0" max="10" placeholder="Nota">
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="input-group">
+        <label for="criatividade">Criatividade</label>
+        <input type="number" id="criatividade" min="0" max="10" placeholder="Nota">
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="input-group">
+        <label for="capricho">Capricho</label>
+        <input type="number" id="capricho" min="0" max="10" placeholder="Nota">
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="input-group">
+        <label for="dominio">Domínio do conteúdo</label>
+        <input type="number" id="dominio" min="0" max="10" placeholder="Nota">
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="input-group">
+        <label for="abordagem">Abordagem do tema</label>
+        <input type="number" id="abordagem" min="0" max="10" placeholder="Nota">
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="espaca"></div>
+    <h2>Adicione uma observação</h2>
+    <div class="section">
+        <div class="observation-section"></div>
+        <textarea  class="observation-input" id="observacao" rows="4" placeholder="Texto..."></textarea>
+    </div>
+
+    <div class="espaca"></div>
+
+    <button type="submit">Enviar</button>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <a href="#" class="footer-icon">
+        <img src="img/icons8-câmera-50.png" alt="Câmera">
+    </a>
+    <a href="#" class="footer-icon">
+        <img src="img/icons8-página-inicial-64.png" alt="Início">
+    </a>
+    <a href="#" class="footer-icon">
+        <img src="img/icons8-livro-64.png" alt="Configurações">
+    </a>
+
+</div>
+
+</body>
+</html>
