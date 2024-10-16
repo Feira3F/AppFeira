@@ -3,64 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Objetivos de Desenvolvimento Sustentável (ODS)</title> 
+    <title>Objetivos de Desenvolvimento Sustentável</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        h1 {
+            color: #f0f0f0;
+            font-size: 1.5em; 
+            margin: 0;
+        }
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
             background-color: #f0f0f0;
             color: #333;
-            min-height: 100vh;
+        }
+
+        header {
+            background-color: #282828;
+            background: linear-gradient(to bottom, #000000, #522B58);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .back-arrow {
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+            margin-right: 15px; /* Espaçamento entre a setinha e o título */
+        }
+
+        .header-title {
+            flex-grow: 1; /* Permite que o título ocupe o espaço disponível */
+            text-align: center; /* Centraliza o título */
         }
 
         .container {
-            text-align: center;
-            background-color: #282828;
-            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 400px;
-        }
-
-        h1 {
-            color: white;
-            margin-bottom: 20px;
+            max-width: 800px;
+            margin: auto;
         }
 
         .search-container {
             position: relative;
+            width: 100%;
             margin-bottom: 20px;
         }
 
         .search-container input {
-            width: 80%; 
-            padding: 8px 30px 8px 40px; 
+            width: 100%;
+            padding: 8px 30px 8px 40px;
             border-radius: 20px;
             border: none;
             outline: none;
-            font-size: 14px; 
+            font-size: 14px;
         }
 
         .search-container .search-icon {
             position: absolute;
-            left: 10px;
             top: 50%;
+            left: 10px;
             transform: translateY(-50%);
-            color: #aaa; 
-            font-size: 18px; 
+            color: #aaa;
+            font-size: 18px;
         }
 
         .ods-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 20px;
+            width: 100%;
             margin-top: 20px;
+            justify-items: center;
         }
 
         .ods-card {
@@ -71,7 +90,6 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s;
             cursor: pointer;
-            width: 80%;
         }
 
         .ods-card:hover {
@@ -79,14 +97,59 @@
         }
 
         .ods-icon {
-            width: 100%; 
+            width: 100%;
             height: auto;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            width: 100%;
+            position: relative;
+            flex-wrap: wrap;
+        }
+
+        .icon {
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+            margin: 5px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: row; /* Mantém a direção em linha para telas pequenas */
+                padding: 10px;
+            }
+
+            .header-title {
+                text-align: center;
+                flex-grow: 1;
+            }
+
+            .back-arrow {
+                margin-right: 10px; /* Ajusta espaçamento em telas menores */
+            }
+        }
+
+        @media (max-width: 400px) {
+            .back-arrow {
+                font-size: 20px; /* Reduz o tamanho da setinha em telas menores */
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <i class="fas fa-arrow-left back-arrow" onclick="goBack()"></i>
+        <h1 class="header-title">ODS</h1>
+    </header>
+
     <div class="container">
-        <h1>Objetivos de Desenvolvimento Sustentável (ODS)</h1>
         <div class="search-container">
             <input type="text" placeholder="Buscar...">
             <span class="search-icon"><i class="fas fa-search"></i></span>
@@ -118,7 +181,7 @@
 
         function displayODS() {
             const container = document.getElementById('odsContainer');
-            container.innerHTML = ''; 
+            container.innerHTML = '';
 
             ods.forEach(od => {
                 const card = document.createElement('div');
@@ -132,8 +195,17 @@
             });
         }
 
+        function goBack() {
+            window.history.back(); 
+        }
+
         displayODS(); 
     </script>
+
+    <footer>
+        <div class="icon" title="Galeria"><i class="fas fa-camera"></i></div>
+        <div class="icon" title="Início"><i class="fas fa-home"></i></div>
+        <div class="icon" title="Livros"><i class="fas fa-book"></i></div>
+    </footer>
 </body>
 </html>
-

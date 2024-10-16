@@ -9,52 +9,45 @@
 </head>
 <body>
 
-  <div id="menu-btn" onclick="toggleMenu()">
+<div id="menu-btn" onclick="toggleMenu()">
     &#9776;
-  </div>
+</div>
 
-  <div id="side-menu" class="side-menu">
+<div id="side-menu" class="side-menu">
     <div class="user-info">
-      <img id="sideMenuProfilePic" src="user-profile.jpg" alt="Foto do usuário" class="profile-pic">
-      <h2>Nome do Usuário</h2>
-      <p>email@exemplo.com</p>
+        <img id="sideMenuProfilePic" src="user-profile.jpg" alt="Foto do usuário" class="profile-pic">
+        <h2>Nome do Usuário</h2>
+        <p>email@exemplo.com</p>
     </div>
     <nav>
-      <ul>
-        <li><a href="#"><i class="fas fa-home"></i> Página Inicial</a></li>
-        <li><a href="#"><i class="fas fa-bullhorn"></i> Sobre o App</a></li>
-        <li><a href="#"><i class="fas fa-medal"></i> Créditos</a></li>
-        <li><a href="#"><i class="fas fa-book"></i> Projetos</a></li>
-        <li><a href="#"><i class="fas fa-headset"></i> Suporte</a></li>
-        <li><a href="#"><i class="fas fa-star"></i> Avaliação</a></li>
-      </ul>
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i> Página Inicial</a></li>
+            <li><a href="#"><i class="fas fa-bullhorn"></i> Sobre o App</a></li>
+            <li><a href="#"><i class="fas fa-medal"></i> Créditos</a></li>
+            <li><a href="#"><i class="fas fa-book"></i> Projetos</a></li>
+            <li><a href="#"><i class="fas fa-headset"></i> Suporte</a></li>
+            <li><a href="#"><i class="fas fa-star"></i> Avaliação</a></li>
+        </ul>
     </nav>
-  </div>
+</div>
 
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <script>
+<script>
     function toggleMenu() {
-      var menu = document.getElementById('side-menu');
-      if (menu.classList.contains('open')) {
-        menu.classList.remove('open');
-      } else {
-        menu.classList.add('open');
-      }
+        var menu = document.getElementById('side-menu');
+        menu.classList.toggle('open');
     }
 
-    // Função para atualizar a imagem no perfil e no menu lateral
     function previewImage(event) {
-      const fotoPerfil = document.getElementById('fotoPerfil');
-      const sideMenuProfilePic = document.getElementById('sideMenuProfilePic');
-      const newImageUrl = URL.createObjectURL(event.target.files[0]);
+        const fotoPerfil = document.getElementById('fotoPerfil');
+        const sideMenuProfilePic = document.getElementById('sideMenuProfilePic');
+        const newImageUrl = URL.createObjectURL(event.target.files[0]);
 
-      // Atualiza as duas imagens
-      fotoPerfil.src = newImageUrl;
-      sideMenuProfilePic.src = newImageUrl;
+        fotoPerfil.src = newImageUrl;
+        sideMenuProfilePic.src = newImageUrl;
     }
-  </script>
+</script>
 
-  <div class="container">
+<div class="container">
     <input type="file" id="fotoInput" accept="image/*" onchange="previewImage(event)" />
     <div class="perfil">
         <img id="fotoPerfil" src="default-avatar.png" alt="Foto de perfil" />
@@ -67,103 +60,108 @@
             <i class="fas fa-chalkboard-teacher"></i> 
             <h3>Avaliar</h3>
         </div>
-      <div class="botoes">
-          <div class="botao">
-              <i class="fas fa-puzzle-piece"></i> 
-              <h3>Local Do Estande</h3>
+        <div class="botoes">
+            <div class="botao">
+                <i class="fas fa-puzzle-piece"></i> 
+                <h3>Local Do Estande</h3>
+            </div>
+            <div class="botao">
+                <i class="fas fa-book-reader"></i> 
+                <h3>Grupos</h3>
+            </div>
+            <div class="botao">
+              <a href="ods.html" class="no-underline">
+                  <i class="fas fa-globe"></i>
+                  <h3>ODS</h3>
+              </a>
           </div>
-          <div class="botao">
-              <i class="fas fa-book-reader"></i> 
-              <h3>Grupos</h3>
-          </div>
-          <div class="botao">
-            <i class="fas fa-globe"></i>
-            <h3><a href="ods.html" class="no-underline">ODS</a></h3>
+            <div class="botao">
+                <i class="fas fa-images"></i>
+                <h3>Fotos</h3>
+            </div>
+            <div class="botao">
+                <i class="fas fa-question-circle"></i> 
+                <h3>Dúvidas</h3>
+            </div>
+            <div class="botao">
+                <i class="fas fa-sign-out-alt"></i> 
+                <h3>Sair</h3>
+            </div>
         </div>
-          <div class="botao">
-              <i class="fas fa-images"></i>
-              <h3>Fotos</h3>
-          </div>
-          <div class="botao">
-              <i class="fas fa-question-circle"></i> 
-              <h3>Dúvidas</h3>
-          </div>
-          <div class="botao">
-              <i class="fas fa-sign-out-alt"></i> 
-              <h3>Sair</h3>
-          </div>
-      </div>
     </div>
-  </div>
+</div>
 
-  <style>
-      body {
-          font-family: Arial, sans-serif;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          background-color: #f0f0f0;
-          color: white;
-          margin-top: 5%;
-      }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        color: white;
+        margin-top: 5%;
+    }
 
-      .container {
-          text-align: center;
-          background-color: #282828;
-          border-radius: 8px;
-          padding: 20px;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-          width: 90%;
-          max-width: 400px;
-      }
+    .container {
+        text-align: center;
+        background-color: #282828;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 400px;
+    }
 
-      input[type="file"] {
-          margin-bottom: 20px;
-      }
+    input[type="file"] {
+        margin-bottom: 20px;
+    }
 
-      .perfil {
-          margin-top: 20px;
-      }
+    .perfil {
+        margin-top: 20px;
+    }
 
-      #fotoPerfil {
-          width: 100px;
-          height: 100px;
-          border-radius: 50%;
-          object-fit: cover;
-          border: 2px solid;
-      }
+    #fotoPerfil {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid;
+    }
 
-      .botoes {
-          margin-top: 20px;
-          display: grid;
-          grid-template-columns: repeat(2, 1fr); 
-          gap: 20px; 
-      }
+    .botoes {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+    }
 
-      .botao {
-          background-color: white;
-          color: black;
-          border: none;
-          border-radius: 5px;
-          padding: 15px;
-          text-align: center;
-          cursor: pointer;
-          transition: background-color 0.3s;
-      }
+    .botao {
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        padding: 15px;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
 
-      .botao i {
-          font-size: 24px; 
-          display: block; 
-          color: #4E2A55; 
-      }
+    .botao i {
+        font-size: 24px; 
+        display: block; 
+        color: #4E2A55; 
+    }
 
-      .botao:hover {
-          background-color: #54a593;
-      }
+    .botao:hover {
+        background-color: #54a593;
+    }
 
-      /* Estilos do menu lateral */
-      #menu-btn {
+    .botao:active {
+        background-color: #3c8e7f; /* Cor ao ser clicado */
+    }
+
+    #menu-btn {
         font-size: 30px;
         cursor: pointer;
         padding: 10px;
@@ -172,9 +170,9 @@
         left: 20px;
         z-index: 1000;
         color: #ffffff;
-      }
+    }
 
-      .side-menu {
+    .side-menu {
         height: 100%;
         width: 0;
         position: fixed;
@@ -184,58 +182,57 @@
         overflow-x: hidden;
         transition: 0.5s;
         padding-top: 60px;
-      }
+    }
 
-      .side-menu .user-info {
+    .side-menu .user-info {
         text-align: center;
         padding: 10px;
         color: white;
-      }
+    }
 
-      .profile-pic {
+    .profile-pic {
         border-radius: 50%;
         width: 80px;
         height: 80px;
         object-fit: cover;
-      }
+    }
 
-      .side-menu nav ul {
+    .side-menu nav ul {
         list-style: none;
         padding: 0;
         margin-top: 30px;
-      }
+    }
 
-      .side-menu nav ul li {
+    .side-menu nav ul li {
         padding: 10px 15px;
         text-align: left;
-      }
+    }
 
-      .side-menu nav ul li a {
+    .side-menu nav ul li a {
         color: white;
         text-decoration: none;
         font-size: 18px;
         display: flex;
         align-items: center;
-      }
+    }
 
-      .side-menu nav ul li a i {
+    .side-menu nav ul li a i {
         margin-right: 10px;
         font-size: 20px;
-      }
+    }
 
-      .side-menu nav ul li:hover {
+    .side-menu nav ul li:hover {
         background-color: #444;
-      }
+    }
 
-      /* Abre o menu lateral */
-      .side-menu.open {
+    .side-menu.open {
         width: 250px;
-      }
+    }
 
-      .no-underline {
-            text-decoration: none;
-            color: #282828;
-        }
-  </style>
+    .no-underline {
+        text-decoration: none;
+        color: #282828;
+    }
+</style>
 </body>
 </html>
