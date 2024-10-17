@@ -1,1 +1,0 @@
-como rodar o back/api -> em C:\xampp\htdocs (pasta do seu amp) coloca o clone la e executa o xampp, roda apache e mysql, cria uma conexão no mysql workbench e abre o feira.sql, executa e ta tudo funcionando, não tem dados de teste, apenas a estrutura
