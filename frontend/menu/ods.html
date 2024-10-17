@@ -50,19 +50,22 @@
         }
 
         .search-container {
-            position: relative;
-            width: 100%;
-            margin-bottom: 20px;
-        }
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Limita a largura da barra de pesquisa */
+    margin-bottom: 20px;
+}
 
-        .search-container input {
-            width: 100%;
-            padding: 8px 30px 8px 40px;
-            border-radius: 20px;
-            border: none;
-            outline: none;
-            font-size: 14px;
-        }
+.search-container input {
+    width: 100%;
+    padding: 8px 30px 8px 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
 
         .search-container .search-icon {
             position: absolute;
