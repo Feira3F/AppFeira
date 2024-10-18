@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefinição de Senha</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7fa;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 700;
+            font-size: 28px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .link {
+            background-color: #e8f0fe;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            text-align: center;
+            margin: 30px 0;
+            color: #1a73e8;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px dashed #1a73e8;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .imagembonita {
+            margin: auto;
+            display: block;
+            width: 50%;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Redefinição de Senha</h1>
+        <p>Você solicitou a redefinição da sua senha. Para prosseguir, clique no link abaixo:</p>
+        <a class="link" href="<?php echo $linkRedefinicao; ?>">Redefinir Senha</a>
+        <p>Este link é válido por alguns minutos. Por favor, use-o imediatamente para redefinir sua senha.</p>
+        <div class="footer">
+            <p>Se você não solicitou esta redefinição, por favor ignore este e-mail ou entre em contato com nosso suporte.</p>
+            <br>
+            <div>
+                <img class="imagembonita"
+                    src="https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/110/2024/07/etec_mcm.png"
+                    alt="ETEC LOGO & CENTRO PAULA SOUZA LOGO">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
