@@ -1,0 +1,305 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh; 
+    background-color: white;
+    position: relative; 
+    z-index: 1; 
+}
+
+header {
+    padding: 20px;
+    background-image: url('img/fundo.png'); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9; 
+    color: white;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px; 
+    z-index: 0;  
+}
+
+header h1 {
+    font-size: 26px;
+    margin: 0;
+    z-index: 2; 
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 3%; /* Reduzindo o espaçamento para telas menores */
+}
+
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    background-color: white; 
+    border-top-left-radius: 25px; 
+    border-top-right-radius: 25px;
+    box-shadow: 0 -8px 16px rgba(156, 8, 189, 0.2);
+    transition: box-shadow 0.3s ease; 
+    position: relative;
+    z-index: 2; 
+    margin-top: 150px; 
+}
+
+.date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7%;
+    margin-top: 4%;
+}
+
+.date h3 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.date .add {
+    background: #542e91;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.date .add:hover {
+    background: #8761db;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    flex-grow: 1; /* Expande para ocupar o espaço disponível */
+}
+
+.hour {
+    display: flex;
+    align-items: start;
+    position: relative;
+    flex-grow: 1; /* Expande as horas para se ajustar na tela */
+}
+
+.time-line {
+    flex-grow: 1;
+    height: 50px;
+    border-top: 1px dashed #ccc;
+    border-bottom: 1px dashed #ccc;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.time-line:hover {
+    border-color: #aa78ff;
+    background-color: rgba(170, 120, 255, 0.3);
+    box-shadow: 0 0 5px rgba(84, 46, 128, 0.5);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    header {
+        padding: 15px;
+    }
+    
+    .row {
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-left: 5px;
+        margin-right: 2%;
+    }
+
+    .time {
+        width: 100%; 
+    }
+
+    .date h3 {
+        font-size: 18px;
+    }
+
+    .date .add {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+/* ADICIONANDO */
+/* Estilos para a página de "Novo Revezamento" */
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.horario {
+    display: flex;
+    justify-content: space-between;
+}
+
+.horario .input-group {
+    width: 48%;
+}
+
+.color-options {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 10px;
+    margin: 10px 0;
+    width: 100%; 
+
+}
+
+.color-circle {
+    width: 20px; 
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid transparent; 
+    transition: border-color 0.3s ease;
+}
+
+.color-circle.red {
+    background-color: red;
+}
+
+.color-circle.blue-light {
+    background-color: #6A7BD9; 
+}
+
+.color-circle.yellow {
+    background-color: #E7C74D; 
+}
+
+.color-circle.green-dark {
+    background-color: #006F2D; 
+}
+
+.color-circle.purple {
+    background-color: #9253C4; 
+}
+
+.color-circle.peach {
+    background-color: #E28D6B; 
+}
+
+.color-circle.green-light {
+    background-color: #92F3C6; 
+}
+
+.color-circle.cyan {
+    background-color: #5DD9E1;
+}
+
+.color-circle.neon-green {
+    background-color: #8FFF3F; 
+}
+
+.color-circle.pink-light {
+    background-color: #F49BC1; 
+}
+
+/* Quando o input (correspondente ao label) estiver selecionado */
+input[type="radio"]:checked + label {
+    border-color: black; /* Cor preta para indicar seleção */
+}
+
+.color-circle:hover {
+    border-color: #ccc;
+}
+
+.save-button {
+    background: #542e91;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s ease;
+    margin-top: 20px;
+}
+
+.save-button:hover {
+    background: #8761db;
+}
+
+/* Responsividade para o formulário */
+@media (max-width: 600px) {
+    .horario {
+        flex-direction: column;
+    }
+
+    .horario .input-group {
+        width: 100%;
+    }
+
+    .save-button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .color-options {
+        justify-content: flex-start;
+    }
+}
+
+/* Responsividade para as bolinhas */
+@media (max-width: 600px) {
+    .color-options {
+        gap: 6px; /* Ajusta o espaçamento em telas menores */
+    }
+}
